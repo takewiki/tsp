@@ -1,6 +1,6 @@
 # 设置app标题-----
 
-app_title <-'App Template';
+app_title <-'智能支持工作台V1.0';
 
 
 # 设置3条消息框------
