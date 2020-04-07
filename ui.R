@@ -7,11 +7,11 @@ shinyUI(dashboardPage(skin = "blue",
                     
                 
                     
-                    dashboardHeader(title = "网商HR数据中台",
+                    dashboardHeader(title = app_title,
                                    
                                     headerMsg1,
                                     dynamicMsgMenu,
-                                    NotiMenuObj,
+                                   # NotiMenuObj,
                                     disable = F
                     ),
                     
