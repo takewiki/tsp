@@ -59,9 +59,9 @@
            show.update=T,
            title.edit = '修改窗口',
            label.edit = '修改',
-           callback.update = books.update.callback3,
-           callback.insert = books.insert.callback3,
-           callback.delete = books.delete.callback3)
+           callback.update = books.update.callback3A,
+           callback.insert = books.insert.callback3A,
+           callback.delete = books.delete.callback3A)
    dtedit2(input, output,
            name = 'tcp_prior3B',
            thedata = books3B,
@@ -77,9 +77,9 @@
            show.update=F,
            title.edit = '修改窗口',
            label.edit = '修改',
-           callback.update = books.update.callback3,
-           callback.insert = books.insert.callback3,
-           callback.delete = books.delete.callback3)
+           callback.update = books.update.callback3B,
+           callback.insert = books.insert.callback3B,
+           callback.delete = books.delete.callback3B)
    dtedit2(input, output,
            name = 'tcp_prior4',
            thedata = books4,
