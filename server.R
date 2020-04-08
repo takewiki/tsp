@@ -6,7 +6,8 @@
    books <- getBooks()
    books1 <- getBooks1()
    books2 <- getBooks2()
-   books3 <- getBooks3()
+   books3A <- getBooks3A()
+   books3B <- getBooks3B()
    books4 <- getBooks4()
    #print(books)
    dtedit2(input, output,
@@ -44,8 +45,8 @@
            callback.insert = books.insert.callback2,
            callback.delete = books.delete.callback2)
    dtedit2(input, output,
-           name = 'tcp_prior3',
-           thedata = books3,
+           name = 'tcp_prior3A',
+           thedata = books3A,
            edit.cols = c('FQues','FAnsw'),
            edit.label.cols = c('问题','答案'),
            input.types = c(FAnsw='textAreaInput'),
@@ -56,6 +57,24 @@
            show.copy = F,
            show.delete = F,
            show.update=T,
+           title.edit = '修改窗口',
+           label.edit = '修改',
+           callback.update = books.update.callback3,
+           callback.insert = books.insert.callback3,
+           callback.delete = books.delete.callback3)
+   dtedit2(input, output,
+           name = 'tcp_prior3B',
+           thedata = books3B,
+           edit.cols = c('FQues','FAnsw'),
+           edit.label.cols = c('问题','答案'),
+           input.types = c(FAnsw='textAreaInput'),
+           #input.choices = list(fname = unique(unlist(books$fname))),
+           view.cols = c('FId','FQues','FAnsw'),
+           view.captions = c('序号','问题','答案'),
+           show.insert = F,
+           show.copy = F,
+           show.delete = F,
+           show.update=F,
            title.edit = '修改窗口',
            label.edit = '修改',
            callback.update = books.update.callback3,

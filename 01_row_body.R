@@ -30,13 +30,22 @@ menu_row <- tabItem(tabName = "row",
                                       
                                             
                                           ))))),
+                               tabPanel("可修改答案问题清单", 
+                                        tagList(fluidRow(
+                                          column(12,   box(
+                                            title = "今日处理区", width = NULL, solidHeader = TRUE, status = "primary",
+                                           
+                                            uiOutput('tcp_prior3A')
+                                        
+                                            
+                                          ))))),
                                tabPanel("今日已处理问题清单", 
                                         tagList(fluidRow(
                                           column(12,   box(
-                                            title = "今日获取区", width = NULL, solidHeader = TRUE, status = "primary",
-                                           
-                                            uiOutput('tcp_prior3')
-                                        
+                                            title = "今日查询区", width = NULL, solidHeader = TRUE, status = "primary",
+                                            
+                                            uiOutput('tcp_prior3B')
+                                            
                                             
                                           ))))),
                                tabPanel("全部已处理问题清单", 
