@@ -219,7 +219,7 @@ books.insert.callback2 <- function(data, row ,table='t_tsp_ques',f=getBooks2,id_
   return(f())
 }
 
-books.insert.callback3A <- function(data, row ,table='t_tsp_ques',f=getBooks3,id_var='FId') {
+books.insert.callback3A <- function(data, row ,table='t_tsp_ques',f=getBooks3A,id_var='FId') {
   sql_header <- sql_gen_insert(conn,table)
   fieldList <-sql_fieldInfo(conn,table)
   ncount <-nrow(fieldList)
@@ -242,7 +242,7 @@ books.insert.callback3A <- function(data, row ,table='t_tsp_ques',f=getBooks3,id
   return(f())
 }
 
-books.insert.callback3B <- function(data, row ,table='t_tsp_ques',f=getBooks3,id_var='FId') {
+books.insert.callback3B <- function(data, row ,table='t_tsp_ques',f=getBooks3B,id_var='FId') {
   sql_header <- sql_gen_insert(conn,table)
   fieldList <-sql_fieldInfo(conn,table)
   ncount <-nrow(fieldList)
@@ -382,7 +382,7 @@ books.update.callback2 <- function(data, olddata, row,
 
 books.update.callback3A <- function(data, olddata, row,
                                    table='t_tsp_ques',
-                                   f=getBooks3,
+                                   f=getBooks3A,
                                    edit.cols = c('FQues','FAnsw'),
                                    id_var='FId') 
 {
@@ -413,7 +413,7 @@ books.update.callback3A <- function(data, olddata, row,
 
 books.update.callback3B <- function(data, olddata, row,
                                    table='t_tsp_ques',
-                                   f=getBooks3,
+                                   f=getBooks3B,
                                    edit.cols = c('FQues','FAnsw'),
                                    id_var='FId') 
 {
@@ -502,7 +502,7 @@ books.delete.callback2 <- function(data, row ,table ='t_tsp_ques',f=getBooks2,id
   sql_update(conn, query)
   return(f())
 }
-books.delete.callback3A <- function(data, row ,table ='t_tsp_ques',f=getBooks3,id_var='FId') {
+books.delete.callback3A <- function(data, row ,table ='t_tsp_ques',f=getBooks3A,id_var='FId') {
   sql_header <- sql_gen_delete(table);
   sql_tail <-paste0('  ',id_var,' = ',data[row,id_var])
   query <- paste0(sql_header,sql_tail)
@@ -514,7 +514,7 @@ books.delete.callback3A <- function(data, row ,table ='t_tsp_ques',f=getBooks3,i
 }
 
 
-books.delete.callback3B <- function(data, row ,table ='t_tsp_ques',f=getBooks3,id_var='FId') {
+books.delete.callback3B <- function(data, row ,table ='t_tsp_ques',f=getBooks3B,id_var='FId') {
   sql_header <- sql_gen_delete(table);
   sql_tail <-paste0('  ',id_var,' = ',data[row,id_var])
   query <- paste0(sql_header,sql_tail)
